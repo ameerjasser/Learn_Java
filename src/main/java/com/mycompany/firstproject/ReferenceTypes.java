@@ -4,15 +4,20 @@
  */
 package com.mycompany.firstproject;
 
+import java.awt.*;
+
 /**
  *
  * @author User
  */
-public class Second_Learn {
+public class ReferenceTypes {
     
     public static void main(String[] args){
-        byte i = 2;
-        System.out.println(i);
-        System.out.println("iiiiiiiii");
+        
+        Point point1 = new Point(1,2);
+        Point point2 = point1;
+        
+        point1.x = 2;
+        System.out.println(point2);
     }
 }
