@@ -2,20 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.firstproject;
-
-import java.util.Date;
+package com.mycompany.firstproject.Toturial.Tutorial.Tutorial1;
 
 /**
  *
  * @author User
  */
-public class The_time {
-    
-    public static void main(String[] args){
+public class T01P0104 {
+    public static void main(String[] args) {
         
-        Date now = new Date();
-        System.out.println(now);
     }
+    
 }
- 

@@ -2,22 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.firstproject;
+package com.mycompany.firstproject.Beginners;
 
-import java.awt.*;
+import java.util.Date;
 
 /**
  *
  * @author User
  */
-public class ReferenceTypes {
+public class The_time {
     
     public static void main(String[] args){
         
-        Point point1 = new Point(1,2);
-        Point point2 = point1;
-        
-        point1.x = 2;
-        System.out.println(point2);
+        Date now = new Date();
+        System.out.println(now);
     }
 }
+ 
