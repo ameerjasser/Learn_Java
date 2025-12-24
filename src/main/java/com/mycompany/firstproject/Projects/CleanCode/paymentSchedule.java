@@ -48,7 +48,10 @@ public class paymentSchedule {
             
             System.out.printf("Enter a value between %d and %.0f.\n", minimum, maximum);
         }
+
+        scanner.close();
         return input;
+        
     }
     
     public static double calculateBalance(byte period,
@@ -63,6 +66,7 @@ public class paymentSchedule {
                 - Math.pow(1+monthlyInterest,numberOfPaymentMade))
                 /(Math.pow(1+monthlyInterest,numberOfPayment)-1);
         return balance;
+
     }
     
     public static double calculateMortgage(byte period,

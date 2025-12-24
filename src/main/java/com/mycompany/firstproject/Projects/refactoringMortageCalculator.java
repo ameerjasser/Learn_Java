@@ -32,6 +32,7 @@ public class refactoringMortageCalculator {
             
             System.out.printf("Enter a value between %d and %.0f.\n", minimum, maximum);
         }
+        scanner.close();
         return input;
     }
     public static double calculateMortgage(byte period,

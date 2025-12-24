@@ -34,6 +34,7 @@ public class TernaryOperator {
         className = (income > 100_000)? "First" : "Economy";
         
         System.out.println(className);
+        scanner.close();
     }
     
 }

@@ -65,6 +65,6 @@ public class DevelopedMortageCalculator {
         String mortagaeFormatted = NumberFormat.getCurrencyInstance().format(result);
         System.out.println(mortagaeFormatted);
         
-        
+        scanner.close();
     }
 }

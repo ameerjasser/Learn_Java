@@ -18,6 +18,8 @@ public class DoWhileLoops {
             if (!input.equals("quit"))
                 System.out.println(input);
         }while(!input.equals("quit"));
+
+        scanner.close();
     }
     
 }

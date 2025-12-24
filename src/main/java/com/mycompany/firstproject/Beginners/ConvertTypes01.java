@@ -14,7 +14,7 @@ public class ConvertTypes01 {
         String x = "1";
         System.out.println(Integer.parseInt(x));
         
-        int number = 1;
+       // int number = 1;
        
         System.out.println(Math.ceil(1.004F));
         

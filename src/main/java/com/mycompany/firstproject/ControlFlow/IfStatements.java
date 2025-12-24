@@ -34,7 +34,7 @@ public class IfStatements {
         else
             System.out.println("It's cold");
         
-        
+        scanner.close();
         
         
         

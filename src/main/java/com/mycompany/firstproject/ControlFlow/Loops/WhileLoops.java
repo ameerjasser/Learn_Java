@@ -36,6 +36,7 @@ public class WhileLoops {
             input = scanner.next().toLowerCase();
             
         }
+        scanner.close();
     }
     
 }

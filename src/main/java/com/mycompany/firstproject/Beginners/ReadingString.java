@@ -15,7 +15,7 @@ public class ReadingString {
         String name = scanner.nextLine().trim();
         System.out.println("You're name is " + name);
         
-        
+        scanner.close();
     }
     
 }

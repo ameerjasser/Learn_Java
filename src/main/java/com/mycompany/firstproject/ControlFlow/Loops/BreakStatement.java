@@ -25,6 +25,7 @@ public class BreakStatement {
             if (i == 0)
                 break;
         }    
+        scanner.close();
     }
      
     
