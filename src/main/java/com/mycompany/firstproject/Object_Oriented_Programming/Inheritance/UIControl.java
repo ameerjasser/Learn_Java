@@ -1,7 +1,7 @@
 package com.mycompany.firstproject.Object_Oriented_Programming.Inheritance;
 
 public class UIControl {
-    private boolean isEnabled = true;
+    public boolean isEnabled = true;
 
     public UIControl(boolean isEnabled){
         this.isEnabled = isEnabled;
