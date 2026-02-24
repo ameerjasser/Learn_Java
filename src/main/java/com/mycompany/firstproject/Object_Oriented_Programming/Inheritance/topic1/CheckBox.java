@@ -1,0 +1,6 @@
+package com.mycompany.firstproject.Object_Oriented_Programming.Inheritance.topic1;
+
+public class CheckBox extends UIControl{
+
+
+}

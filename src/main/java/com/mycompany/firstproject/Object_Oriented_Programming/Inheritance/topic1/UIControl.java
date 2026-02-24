@@ -1,12 +1,16 @@
-package com.mycompany.firstproject.Object_Oriented_Programming.Inheritance;
+package com.mycompany.firstproject.Object_Oriented_Programming.Inheritance.topic1;
 
 public class UIControl {
     public boolean isEnabled = true;
 
-    public UIControl(boolean isEnabled){
-        this.isEnabled = isEnabled;
-        System.out.println("UIControl initialized");
+    public UIControl() {
+        System.out.println("UICotrol");
     }
+    public UIControl(boolean isEnabled) {
+        this.isEnabled = isEnabled;
+        System.out.println("UICotrol with boolean");
+    }
+
     public void enable(){
         isEnabled = true;
     }
