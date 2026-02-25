@@ -1,6 +1,6 @@
 package com.mycompany.firstproject.Object_Oriented_Programming.Inheritance.topic1;
 
-public class UIControl {
+public abstract class UIControl {
     public boolean isEnabled = true;
 
     public UIControl() {
@@ -11,9 +11,7 @@ public class UIControl {
         System.out.println("UICotrol with boolean");
     }
 
-    public void render(){
-        System.out.println("Rendering UIControl");
-    }
+    public abstract void render();  // An abstract method is a method that is declared without an implementation.
 
     public void enable(){
         isEnabled = true;

@@ -11,7 +11,7 @@ public class Main {
         }
 
         System.out.println("This is the begging of the program");
-        var box = new UIControl(true);
+        //var box = new UIControl(true);  we cannot create an object of an abstract class, because an abstract class is not a complete class.
         var box1 = new TextBox();
         //System.out.println(box1);
         //System.out.println(box1.hashCode()); // this will print a number, which calculated based on the address of this object in the memory
