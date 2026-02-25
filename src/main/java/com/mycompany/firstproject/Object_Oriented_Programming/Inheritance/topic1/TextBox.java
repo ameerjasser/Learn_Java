@@ -8,21 +8,17 @@ public class TextBox extends UIControl{
         System.out.println("TextBox");
     }
     public TextBox(boolean isEnabled) {
-        //super(isEnabled);
+        //super(isEnabled);  /// This line calls the constructor of the parent class (UIControl)
         System.out.println("TextBox with boolean");
     }
 
-    /// This line calls the constructor of the parent class (UIControl)
-
-
-    public void setText(String Text){
-
-        this.text = Text;
+    @Override
+    public void render() {
+        System.out.println("Rendering a TextBox");
     }
-    public void clear(){
 
-        text = "";
-    }
+    public void setText(String Text){ this.text = Text; }
+    public void clear(){ text = ""; }
     public String getText(){
         return text;
     }

@@ -4,6 +4,12 @@ package com.mycompany.firstproject.Object_Oriented_Programming.Inheritance.topic
 
 public class Main {
     public static void main(String[] args) {
+
+        UIControl[] controls = {new TextBox(), new CheckBox()};  // this is called polymorphism, we are creating an array of UIControl references,
+        for(var control : controls){                                //  but we are assigning TextBox and CheckBox objects to it,
+            control.render();                                   // this is possible because TextBox and CheckBox are subclasses of UIControl, so they can be treated as UIControl references
+        }
+
         System.out.println("This is the begging of the program");
         var box = new UIControl(true);
         var box1 = new TextBox();

@@ -11,6 +11,10 @@ public class UIControl {
         System.out.println("UICotrol with boolean");
     }
 
+    public void render(){
+        System.out.println("Rendering UIControl");
+    }
+
     public void enable(){
         isEnabled = true;
     }
