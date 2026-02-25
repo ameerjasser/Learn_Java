@@ -13,9 +13,9 @@ public abstract class UIControl {
 
     public abstract void render();  // An abstract method is a method that is declared without an implementation.
 
-    public void enable(){
+    public final void enable(){
         isEnabled = true;
-    }
+    } // A final method is a method that connot be overridden by subclasses.
     public void disable(){
         isEnabled = false;
     }
