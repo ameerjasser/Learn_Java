@@ -2,6 +2,9 @@ package com.mycompany.firstproject.Object_Oriented_Programming.Inheritance.topic
 
 //import com.mycompany.firstproject.Object_Oriented_Programming.Inheritance.TextBox;
 
+import com.mycompany.firstproject.Object_Oriented_Programming.Interface.TaxCalculater2018;
+import com.mycompany.firstproject.Object_Oriented_Programming.Interface.TaxReport;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -9,6 +12,8 @@ public class Main {
         for(var control : controls){                                //  but we are assigning TextBox and CheckBox objects to it,
             control.render();                                   // this is possible because TextBox and CheckBox are subclasses of UIControl, so they can be treated as UIControl references
         }
+        var taxCalculater2018 = new TaxCalculater2018(100_000);
+        var taxReport = new TaxReport(taxCalculater2018);
 
         System.out.println("This is the begging of the program");
         //var box = new UIControl(true);  we cannot create an object of an abstract class, because an abstract class is not a complete class.
@@ -17,7 +22,7 @@ public class Main {
         //System.out.println(box1.hashCode()); // this will print a number, which calculated based on the address of this object in the memory
         //System.out.println(textBox);
         System.out.println("--------------------------------");
-        show(box);
+        show(box1);
         System.out.println("Done");
     }
     private static void show(UIControl control){
