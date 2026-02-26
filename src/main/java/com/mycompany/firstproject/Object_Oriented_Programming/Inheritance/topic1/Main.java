@@ -1,9 +1,6 @@
 package com.mycompany.firstproject.Object_Oriented_Programming.Inheritance.topic1;
 
-//import com.mycompany.firstproject.Object_Oriented_Programming.Inheritance.TextBox;
 
-import com.mycompany.firstproject.Object_Oriented_Programming.Interface.TaxCalculater2018;
-import com.mycompany.firstproject.Object_Oriented_Programming.Interface.TaxReport;
 
 public class Main {
     public static void main(String[] args) {
