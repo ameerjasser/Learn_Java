@@ -1,4 +1,4 @@
-package com.mycompany.firstproject.Object_Oriented_Programming.Interface;
+package com.mycompany.firstproject.Object_Oriented_Programming.Interface.LearningInterfaces;
 
 public class TaxCalculater2018 implements TaxCalculater {
     private double taxableIncome;

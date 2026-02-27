@@ -1,4 +1,4 @@
-package com.mycompany.firstproject.Object_Oriented_Programming.Interface;
+package com.mycompany.firstproject.Object_Oriented_Programming.Interface.LearningInterfaces;
 
 public class Main {
     public static void main(String[] args) {
