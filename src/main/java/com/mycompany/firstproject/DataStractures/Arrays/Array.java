@@ -1,4 +1,4 @@
-package com.mycompany.firstproject.DataStractures;
+package com.mycompany.firstproject.DataStractures.Arrays;
 
 import java.util.Arrays;
 
