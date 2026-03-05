@@ -101,4 +101,13 @@ public class LinkedList {
         return current;
     }
     public int size(){ return count; }
+    public int[] toArray(){
+        int[] array = new int[count];
+        var current = first;
+        for(int i=0; i<count; i++){
+            array[i] = current.value;
+            current = current.next;
+        }
+        return array;
+    }
 }
