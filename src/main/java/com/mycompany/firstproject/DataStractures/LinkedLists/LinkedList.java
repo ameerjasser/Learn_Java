@@ -136,5 +136,25 @@ public class LinkedList {
 //        last.next = null;
 //        first = previous;
 //    }
+    public int getKthFromTheEnd(int k){
+        if(isEmpty())
+            throw new IllegalStateException();
 
+        if(k == 0) return last.value;
+        else if(k<0) throw new IllegalStateException();
+        var num1 = first;
+        var num2 = first;
+        int i = 0;
+        do{
+            num2 = num2.next;
+            if(num2 == null)
+                throw new IllegalArgumentException();
+            i++;
+        }while(i<=k-1);
+        while(num2 != last){
+            num1 = num1.next;
+            num2 = num2.next;
+        }
+        return num1.value;
+    }
 }
