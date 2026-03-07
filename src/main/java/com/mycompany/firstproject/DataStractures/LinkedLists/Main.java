@@ -16,10 +16,20 @@ public class Main {
         list.addLast(20);
         list.addLast(90);
         list.addLast(30);
-        list.deleteLast();
+        //list.deleteLast();
         System.out.println(list.indexOf(90));
         System.out.println(list.contains(0));
         var array = list.toArray();
         System.out.println(Arrays.toString(array));
+        list.deleteLast();
+        System.out.println("we reverse");
+        list.reverse();
+        System.out.println("----------------------");
+        array = list.toArray();
+        System.out.println(Arrays.toString(array));
+//        System.out.println("----------------------");
+//        System.out.println(list.contains(90));
+//        System.out.println(list.indexOf(30));
+
     }
 }

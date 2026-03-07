@@ -25,7 +25,6 @@ public class LinkedList {
     // indexOf
     public void addLast(int item) {
         var node = new Node(item);
-
         if(isEmpty())
             first = last = node;
         else{
@@ -35,7 +34,6 @@ public class LinkedList {
     }
     public void addFirst(int item) {
         var node = new Node(item);
-
         if(isEmpty())
             first = last = node;
         else{
@@ -70,13 +68,6 @@ public class LinkedList {
     }
 
     public boolean contains(int item){
-//        var current = first;
-//        while(current != null){
-//            if(current.value == item)
-//                return true;
-//            current = current.next;
-//        }
-//        return false;
         return indexOf(item) != -1;
     }
     public int indexOf(int item){
@@ -87,17 +78,17 @@ public class LinkedList {
             current = current.next;
         }
         return -1;
-
     }
     private boolean isEmpty(){
         return first == null;
     }
     private Node getPrevious(Node node) {
         var current = first;
-        while(current.next != node)
-            current = current.next;
-        if(current.next != node)
-            throw new NoSuchElementException();
+        while(current.next != null) {
+            if (current.next != node) {
+                current = current.next;
+            } else break;
+        }
         return current;
     }
     public int size(){ return count; }
@@ -110,4 +101,40 @@ public class LinkedList {
         }
         return array;
     }
+    public void reverse(){
+        if(isEmpty()) return;
+        var current = last;
+        var newFirst = first;
+        for(int i=0; i<count; i++){
+            if(i==0){
+                current.next = getPrevious(current);
+                newFirst = current;
+                current = current.next;
+            }else if(i >= count-1){
+                current.next = null;
+                last = current;
+                break;
+            }else {
+                current.next = getPrevious(current);
+                current = current.next;
+            }
+        }
+        first = newFirst;
+    }
+    // /////////////// another way to reverse
+    //    public void reverse(){
+//        if(isEmpty()) return;
+//        var previous = first;
+//        var current = first.next;
+//        while(current != null){
+//            var next = current.next;
+//            current.next = previous;
+//            previous = current;
+//            current = next;
+//        }
+//        last = first;
+//        last.next = null;
+//        first = previous;
+//    }
+
 }
