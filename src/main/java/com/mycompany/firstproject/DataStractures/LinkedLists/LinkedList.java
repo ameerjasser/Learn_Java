@@ -14,8 +14,8 @@ public class LinkedList {
         }
     }
 
-    private Node first;
-    private Node last;
+    private Node head;
+    private Node till;
     private int count = 0;
     //add first
     //add last
@@ -23,46 +23,49 @@ public class LinkedList {
     //delete last
     //contains
     // indexOf
+
+    // TODO void add(int item){ addLast(item); }
+
     public void addLast(int item) {
         var node = new Node(item);
         if(isEmpty())
-            first = last = node;
+            head = till = node;
         else{
-            last.next = node;
-            last = node;
+            till.next = node;
+            till = node;
         }
     }
     public void addFirst(int item) {
         var node = new Node(item);
         if(isEmpty())
-            first = last = node;
+            head = till = node;
         else{
-            node.next = first;
-            first = node;
+            node.next = head;
+            head = node;
         }
     }
     public void deleteFirst() {
         if(isEmpty())
             throw new NoSuchElementException();
 
-        if(first == last)
-            first = last = null;
+        if(head == till)
+            head = till = null;
         else{
-            var second = first.next;
-            first.next = null;
-            first = second;
+            var second = head.next;
+            head.next = null;
+            head = second;
         }
         count--;
     }
     public void deleteLast() {
         if(isEmpty())
             throw new NoSuchElementException();
-        if(first == last)
-            first = last = null;
+        if(head == till)
+            head = till = null;
         else{
-            var previous = getPrevious(last);
+            var previous = getPrevious(till);
             previous.next = null;
-            last = previous;
+            till = previous;
         }
         count--;
     }
@@ -71,7 +74,7 @@ public class LinkedList {
         return indexOf(item) != -1;
     }
     public int indexOf(int item){
-        var current = first;
+        var current = head;
         for(int i=0; i<count; i++){
             if(current.value == item)
                 return i;
@@ -80,10 +83,10 @@ public class LinkedList {
         return -1;
     }
     private boolean isEmpty(){
-        return first == null;
+        return head == null;
     }
     private Node getPrevious(Node node) {
-        var current = first;
+        var current = head;
         while(current.next != null) {
             if (current.next != node) {
                 current = current.next;
@@ -94,7 +97,7 @@ public class LinkedList {
     public int size(){ return count; }
     public int[] toArray(){
         int[] array = new int[count];
-        var current = first;
+        var current = head;
         for(int i=0; i<count; i++){
             array[i] = current.value;
             current = current.next;
@@ -103,8 +106,8 @@ public class LinkedList {
     }
     public void reverse(){
         if(isEmpty()) return;
-        var current = last;
-        var newFirst = first;
+        var current = till;
+        var newFirst = head;
         for(int i=0; i<count; i++){
             if(i==0){
                 current.next = getPrevious(current);
@@ -112,14 +115,14 @@ public class LinkedList {
                 current = current.next;
             }else if(i >= count-1){
                 current.next = null;
-                last = current;
+                till = current;
                 break;
             }else {
                 current.next = getPrevious(current);
                 current = current.next;
             }
         }
-        first = newFirst;
+        head = newFirst;
     }
     // /////////////// another way to reverse
     //    public void reverse(){
@@ -140,10 +143,10 @@ public class LinkedList {
         if(isEmpty())
             throw new IllegalStateException();
 
-        if(k == 0) return last.value;
+        if(k == 0) return till.value;
         else if(k<0) throw new IllegalStateException();
-        var num1 = first;
-        var num2 = first;
+        var num1 = head;
+        var num2 = head;
         int i = 0;
         do{
             num2 = num2.next;
@@ -151,10 +154,24 @@ public class LinkedList {
                 throw new IllegalArgumentException();
             i++;
         }while(i<=k-1);
-        while(num2 != last){
+        while(num2 != till){
             num1 = num1.next;
             num2 = num2.next;
         }
         return num1.value;
     }
+
+
+/*
+    public void addFirst(int item){
+        var node = new Node(item);
+        if(count ==0){  head = node = till; }
+        else{
+            node.next = head;
+            head = node;
+        }
+        count++;
+    }
+
+*/
 }

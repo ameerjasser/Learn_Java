@@ -26,9 +26,9 @@ public class BalancedExpressions extends TheStack{
 //
 //            if(countpracket<0 || countSquared<0 || countcaruly<0)
 //                return false;
-            if(ch == '(' || ch =='{' || ch == '[')
+            if(isLeftBracket(ch))
                 stack.push(ch);
-            else if( ch==')' || ch=='}' || ch==']') {
+            else if(isRightBracket(ch)) {
                 if(stack.empty()) return false;
                 char x = stack.peek();
                 if(x == '(')
@@ -55,4 +55,12 @@ public class BalancedExpressions extends TheStack{
 //        System.out.println("feom");
         return stack.empty();
     }
+
+    private static boolean isRightBracket(char ch) {
+        return ch == ')' || ch == '}' || ch == ']';
+    }
+    private static boolean isLeftBracket(char ch) {
+        return ch == '(' || ch == '{' || ch == '[';
+    }
+
 }
