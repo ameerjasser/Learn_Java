@@ -7,7 +7,7 @@ public class Main {
         BalancedExpressions Ba = new BalancedExpressions();
         String string = null;
         //System.out.println(Ba.toStack(string));
-        System.out.println(Ba.isBalanced(string));
+        System.out.println(Ba.isBalanced("{{{[[]]}}}"));
         //System.out.println("Hello ");
     }
 }
