@@ -3,7 +3,7 @@ package com.mycompany.firstproject.Object_Oriented_Programming.Inheritance.topic
 
 import com.mycompany.firstproject.Object_Oriented_Programming.Inheritance.topic1.TextBox;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         var point1 = new point(1,2);
         var point2 = new point(1,2);
