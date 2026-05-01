@@ -10,9 +10,13 @@ public class Main {
         System.out.println(queue);
         queue.dequeue();
         queue.enqueue(5);
-        queue.enqueue(66);
+        queue.enqueue(45);
         System.out.println(queue);
         System.out.println(queue.dequeue());
-
+        queue.enqueue(99);
+        queue.enqueue(88);
+        System.out.println(queue);
+        queue.enqueue(77);
+        System.out.println(queue);
     }
 }
