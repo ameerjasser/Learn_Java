@@ -25,6 +25,9 @@ public class MyStack {
         arr[arr.length + count2--] = item;
     }
 
+    public int pop1(){
+        return pop1(1);
+    }
     public int pop1(int times){
         if(isEmpty1() || times<=0 || times>count1){
             throw new RuntimeException("Stack does not have this number of Elements!");
