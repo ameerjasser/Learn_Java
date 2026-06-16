@@ -2,6 +2,7 @@ package com.mycompany.firstproject.DataStractures.BinaryTrees;
 
 public class MyBinaryTree {
     private Node root;
+    private int hight = 0;
     class Node{
         int value;
         Node leftChild;
@@ -140,5 +141,39 @@ public class MyBinaryTree {
         traversePostOrder(root.rightChild);
         if(root != this.root)
             System.out.println(root.value + ", ");
+    }
+
+    public void hight(){
+        hight = hight(root);
+        System.out.println(hight);
+    }
+    private int hight(Node root){
+        // int leftHight = 0;
+        // int rightHight = 0;
+
+        if(root == null){
+            return -1;
+        }
+
+        // if(root.leftChild != null){
+        //     //this.hight += 1;
+        //     leftHight += hight(root.leftChild, this.hight) +1;
+        //     // isIncreased = true;
+        // }
+        // if(root.rightChild != null){
+        //     rightHight += hight(root.rightChild, this.hight) +1;
+        // }
+
+        // if(leftHight > rightHight){
+        //     //this.hight += leftHight;
+        //     return leftHight;
+        // }else{
+        //     //this.hight += rightHight;
+        //     return rightHight;
+        // }
+
+        // ----------------------------------------------------------------------
+        // or we can do it like this:
+        return Math.max(hight(root.leftChild), hight(root.rightChild)) + 1;
     }
 }
